@@ -12,7 +12,7 @@ int functionChoiceFinal, foundError = 0;
 
 struct fraction simplify(struct fraction fractToSimplify)
 {
-	for (int potentialFactor = (fractToSimplify.denom / 2) - (fractToSimplify.denom % 2); potentialFactor > 1; potentialFactor--)
+	for (int potentialFactor = (fractToSimplify.denom - (fractToSimplify.denom % 2))/2; potentialFactor > 1; potentialFactor--)
 	{
 		if (fractToSimplify.denom % potentialFactor == 0 && fractToSimplify.num % potentialFactor == 0)
 		{

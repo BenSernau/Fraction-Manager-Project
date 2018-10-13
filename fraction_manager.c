@@ -46,15 +46,15 @@ struct fraction sub(struct fraction x, struct fraction y)
 
 void createFractionPair()
 {
-	printf("\n%s\n\n", "Please enter a fraction");
+	printf("\nPlease enter a fraction\n\n");
 	scanf("%d/%d", &fractFirst.num, &fractFirst.denom);
-	printf("\n%s\n\n", "Please enter another fraction");
+	printf("\nPlease enter another fraction\n\n");
 	scanf("%d/%d", &fractSecond.num, &fractSecond.denom);
 }
 
 int operateOnPair()
 {
-	printf("\n%s\n\n", "What would you like to do with these fractions? ;)\n[a] add, [s] subtract, [m] multiply, [d] divide");
+	printf("\nWhat would you like to do with these fractions? ;)\n[a] add, [s] subtract, [m] multiply, [d] divide\n\n");
 	scanf("%s", &functionChoice);
 
 	if (strcmp(functionChoice, shouldAdd) == 0)
@@ -83,11 +83,11 @@ int operateOnPair()
 
 	else
 	{
-		printf("%s", "\nINVALID INPUT. Stopping...\n\n ");
+		printf("\nINVALID INPUT. Stopping...\n\n ");
 		return 0;
 	}
 
-	printf("%d/%d\n\n%s\n", fractNew.num, fractNew.denom, "Do you want to do anything else?\n[1] different fractions, [2] different operations, same fractions, [3] quit\n");
+	printf("%d/%d\n\nDo you want to do anything else?\n[1] different fractions, [2] different operations, same fractions, [3] quit\n\n", fractNew.num, fractNew.denom);
 	scanf("%d", &functionChoiceFinal);
 
 	if (functionChoiceFinal == 1)
@@ -108,7 +108,7 @@ int operateOnPair()
 
 	else
 	{
-		printf("%s", "\nINVALID INPUT. Stopping...\n\n ");
+		printf("\nINVALID INPUT. Stopping...\n\n ");
 		return 0;
 	}
 
